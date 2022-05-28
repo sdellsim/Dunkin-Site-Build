@@ -1,0 +1,325 @@
+/* Google Web font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #F20C90;
+    --primary-color-hover: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--primary-color);
+    --secondary-color: #FF6D0D;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #000;
+    margin: 0 auto;
+}
+
+body {
+    background: #fff;
+}
+
+/* page structure css */
+
+.widthlimit {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+}
+
+main {
+    padding-top: 130px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+/* general css */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2.375rem;
+
+}
+
+h2 {
+    font-size: 2.rem;
+
+}
+
+h3 {
+    font-size: 1.75rem;
+
+}
+
+h4 {
+    font-size: 1.5rem;
+
+}
+
+h5 {
+    font-size: 1.25rem;
+
+}
+
+h6 {
+    font-size: 1.125rem;
+
+}
+
+.sectiontitle {
+    color: var(--secondary-color);
+}
+
+a,
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 20px 0 20px;
+    font-weight: bold;
+}
+
+input {
+    border: 1px solid #C4C4C4;
+    border-radius: 60px;
+    padding: 9px 28px;
+    background: #fff;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #8C8C8C;
+    outline: none;
+}
+
+button,
+a.btn {
+    padding: 8px 28px;
+    border-radius: 60px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    white-space: nowrap;
+}
+
+button:hover,
+button:focus,
+a.btn:hover,
+a.btn:focus {
+    background: var(--primary-color-hover);
+    border-color: (--primary-color-hover);
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    background-color: transparent !important;
+}
+
+/* header css */
+header {
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding: 20px 0 20px 0;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header div .headerleft {
+    flex-shrink: 4;
+    align-items: center;
+}
+
+header div .headerright {
+    align-items: center;
+}
+
+header nav ul li a {
+    font-size: 1.5rem;
+}
+
+#headersearch input {
+    border-radius: 60px 0px 0px 60px;
+    border-right: 0px;
+}
+
+#headersearch button {
+    border-radius: 0px 60px 60px 0px;
+}
+
+/* nav css */
+
+nav {}
+
+
+/* product grid css */
+.productsgrid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.productitem {
+    text-align: center;
+}
+
+.productimg1x1 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    /* 1:1 ratio */
+}
+
+.productimg
+
+/* 1:1 ratio */
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.producttext {
+    padding: 0 10px 0px 10px;
+}
+
+
+/* bottom ctas */
+#bottomctas {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.cta-container {
+    background-color: var(--primary-color);
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+}
+
+.orange {
+    background-color: var(--secondary-color);
+}
+
+.cta-title {
+    margin: 0 auto;
+}
+
+.cta-title img {
+    height: 34px;
+}
+
+
+
+.cta-container .btn-outline {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+/* footer css */
+footer {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px 0px 20px 0px;
+    display: flex;
+
+}
+
+footer div.widthlimit {
+    display: flex;
+    flex-grow: 1;
+    gap: 32px;
+}
+
+footer nav {
+    flex-grow: 3;
+}
+
+footer nav ul.footernavitems {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    flex-grow: 1;
+}
+
+footer ul li {
+    padding: 0px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    flex-grow: 1;
+}
+
+footer h5{
+    margin-bottom: 10px;
+}
+
+footer nav ul li ul {
+    flex-direction: column;
+}
+
+ul.twocolorderonline {
+    display: grid;
+    grid-auto-flow: col;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.footerlogo {
+    flex-grow: 1;
+    text-align: right;
+}
+
+
+/********* tablet **********/
+@media only screen and (max-width: 768px) {
+
+    .productsgrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    #bottomctas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+
+/******** mobile *********/

@@ -15,13 +15,32 @@
    <div class="container-fluid fixed-top bg-white">
 
     <header class="container-fluid py-4 border-bottom">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <a href="#" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <div class="container">
+
+            <div class="row">
+
+            
+        <div class="col-9" id="headerleft">
+        
+            <a href="#" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
             <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
           </a>
-          <nav></nav>
 
-          <form class="col-12 col-lg-auto" role="search">
+
+          <nav id="headernav" >
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order Online</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Find a Store</a>
+                </li>
+
+          </nav>
+
+        </div>
+
+          <form class="col-3 text-end" role="search">
             <div class="row">
               <div class="col">
                 <input type="text" class="form-control" placeholder="Type a keyword..." name="email">
@@ -32,15 +51,16 @@
             </div>
           </form>
         </div>
+        </div>
       </header>
 
 
 
-        <nav class="navbar navbar-expand-sm container-fluid">
+        <nav id="productnav" class="navbar navbar-expand-sm container-fluid">
 
             <div class="container ">
                 <!-- Links -->
-                <ul class="nav nav-justified col-12">
+                <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Donuts</a>
                     </li>
@@ -72,13 +92,13 @@
 
     </div> 
 
-    <div class="container-xxl">
 
 
 
 
 
-        <main>
+
+        <main class="container-xxl">
             <!-- Carousel -->
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -166,38 +186,37 @@
                 </div>
 
             </section>
-        </main>
 
-        <footer>
             <section id="bottomctas" class="row">
-                <div class="col-md-6 col-lg-3 bg-orange text-white card">
+                
+                <div class="col-md-6 col-lg-3 bg-orange text-white card py-2">
                     <div class="card-body">
-                      <h5 class="card-title">DDPerks</h5>
+                      <h5 class="card-title"><img class="ddperkscta" src="./images/brand/ddperkslogo-white.png" alt="DDPerks" /></h5>
                       <p class="card-text">Sign up and earn reward points 
                         on every spend!</p>
                       <a href="#" class="btn btn-outline-primary-reverse text-white">Sign Up</a>
                     </div>
                   </div>
 
-                  <div class="col-md-6 col-lg-3 bg-pink text-white card">
+                  <div class="col-md-6 col-lg-3 bg-pink text-white card py-2">
                     <div class="card-body">
-                      <h5 class="card-title">Giftcards</h5>
+                      <h5 class="card-title"><img src="./images/icons/giftcard.svg" alt="Giftcards" /> Giftcards</h5>
                       <p class="card-text">Stop the guessing game and give them the gift of choice!</p>
                       <a href="#" class="btn btn-outline-primary-reverse text-white">Buy Giftcards</a>
                     </div>
                   </div>
 
-                  <div class="col-md-6 col-lg-3 bg-orange text-white card">
+                  <div class="col-md-6 col-lg-3 bg-orange text-white card py-2">
                     <div class="card-body">
-                      <h5 class="card-title">Careers</h5>
+                      <h5 class="card-title"><img src="./images/icons/user.svg" alt="Careers" /> Careers</h5>
                       <p class="card-text">Join our team and become part of the Dunkin’ family!!</p>
                       <a href="#" class="btn btn-outline-primary-reverse text-white">View Jobs</a>
                     </div>
                   </div>
 
-                  <div class="col-md-6 col-lg-3 bg-pink text-white card">
+                  <div class="col-md-6 col-lg-3 bg-pink text-white card py-2">
                     <div class="card-body">
-                      <h5 class="card-title">FAQs</h5>
+                      <h5 class="card-title"><img src="./images/icons/faq.svg" alt="FAQs" /> FAQs</h5>
                       <p class="card-text">Got some questions about us 
                         or our products?</p>
                       <a href="#" class="btn btn-outline-primary-reverse text-white">Check out our FAQs</a>
@@ -205,7 +224,106 @@
                   </div>
             </section>
 
+        </main>
 
+
+
+            <footer class="container-fluid">
+            <div class="container">
+            <section id="footerlinks" class="row py-4 mt-5">
+                <div class="col-md-12 col-lg-9">
+                    <div class="row">
+                        <div class="col">
+                <h5>Order Online</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Donuts</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Munchkins</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Fancies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Packs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">DD Combos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Hot Beverages</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Cold Beverages</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Giftcardss</a>
+                      </li>
+                  </ul>
+                </div>
+                <div class="col">
+                    <h5>&nbsp;</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Refunds</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Cancellations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deliveries</a>
+                      </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h5>About Us</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Store Locations</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                      </li>
+                  </ul>
+                  </div>
+
+                  <div class="col">
+                  <h5>Follow Us</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Instagram</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Twitter</a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+            </div>
+
+
+                <div class="col-md-12 col-lg-3 text-end">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
+                      </a>
+                  </div>
+
+            </section>
+
+        </div>    
         </footer>
 
 
@@ -214,10 +332,9 @@
         <p>put product image into div with same hright across all columns height</p>
         <p>Fix search UI</p>
         <p>Fix gutter soacing</p>
-        <p>Fix hovers</p>
-        <p>Fix cta box paddings</p>
-        <p>Change desktop max width</p>
-    </div>
+        <p>Fix hovers and a:active</p>
+        <p>Nav horizontal swipeable on tablet and mobile</p>
+   
 
 </body>
 
