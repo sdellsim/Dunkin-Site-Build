@@ -192,7 +192,7 @@ nav ul
 nav ul li
 {   
      font-weight: bold;
-    /* white-space: nowrap;   */
+   /*  white-space: nowrap;   breaks nav on mobile */ 
 }
 
 
@@ -201,9 +201,7 @@ nav.productnav ul {
     justify-content: space-between; 
     align-items: center;
     overflow: auto;
-    min-width: 938px;   
-
-
+      min-width: 938px;   /*min width before nav item words goes in 2 lines*/
 }
 
 nav.productnav ul li:first-child
@@ -393,6 +391,11 @@ ul.twocolorderonline {
         padding-right: 32px;
     }
 
+    .productnav {
+
+        overflow: scroll;
+    }
+
 
 }
 
@@ -412,12 +415,7 @@ ul.twocolorderonline {
     display: block;
 }
 
-nav.productnav ul {
- 
-    justify-content: flex-start; 
-         gap: 40px;   
 
-}
 
 }
 
@@ -454,12 +452,18 @@ nav.productnav ul {
     {
         padding-left: 0px;
         padding-right: 0px;
-        overflow: scroll;
     }
 
     .productnav ul {
         padding-left: 32px;
         padding-right: 32px;
+    }
+
+    nav.productnav ul {
+ 
+        justify-content: flex-start; 
+             gap: 40px;   
+    
     }
 
 
