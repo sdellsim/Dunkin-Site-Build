@@ -5,60 +5,11 @@
   <title>Dunkin' NZ - Shop Online for Pick-up & Delivery</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/modal/bootstrap.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
-
-
-
-  <style>
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 3;
-      /* Sit on top */
-      padding-top: 100px;
-      /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    /* The Close Button */
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/modal/bootstrap.min.js"></script>
+  <script src="./js/js.js"></script>
 
 </head>
 
@@ -87,8 +38,8 @@
 
           <form id="headersearch" role="search">
             <div class="desktopview">
-            <input type="text" class="search" placeholder="Type a keyword..." onfocus="this.placeholder=''"
-              name="search"><button type="submit" class="btn btn-primary search">Search</button>
+              <input type="text" class="search" placeholder="Type a keyword..." onfocus="this.placeholder=''"
+                name="search"><button type="submit" class="btn btn-primary search">Search</button>
             </div>
             <div class="tabletview">
               <a href="#"><img src="./images/icons/search.svg" /></a>
@@ -96,7 +47,7 @@
             <div class="mobileview">
               <a href="#"><img src="./images/icons/search.svg" /></a>
             </div>
-            </form>
+          </form>
         </div>
       </div>
     </header>
@@ -136,10 +87,10 @@
     <!-- Carousel -->
     <section class="heroimg">
       <a href="order.html">
-      <img src="./images/herobbanner-desktop.png" alt="Welcome Promo" class="desktopview">
-      <img src="./images/herobbanner-tablet.png" alt="Welcome Promo" class="tabletview">
-      <img src="./images/herobbanner-mobile.png" alt="Welcome Promo" class="mobileview">
-    </a>
+        <img src="./images/herobbanner-desktop.png" alt="Welcome Promo" class="desktopview">
+        <img src="./images/herobbanner-tablet.png" alt="Welcome Promo" class="tabletview">
+        <img src="./images/herobbanner-mobile.png" alt="Welcome Promo" class="mobileview">
+      </a>
     </section>
 
     <section id="bestsellers" class="productlist">
@@ -149,7 +100,7 @@
       <div class="productsgrid">
 
         <div class="productitem">
-          <a href="#">
+          <a data-toggle="modal" href="#productModal">
             <div class="productimg1x1">
               <img class="productimg" src="./images/products/packs-donuts12.png" alt="12 Pack Donuts"
                 style="width:100%">
@@ -160,11 +111,11 @@
               <div class="product-price">$25.60</div>
             </div>
           </a>
-          <a data-toggle="modal" href="#storeModal" class="btn">Select Options</a>
+          <a data-toggle="modal" href="#productModal" class="btn">Select Options</a>
         </div>
 
         <div class="productitem">
-          <a href="#">
+          <a data-toggle="modal" href="#productModal">
             <div class="productimg1x1">
               <img class="productimg" src="./images/products/packs-munchkins25.png" alt="25 Pack Munchkins"
                 style="width:100%">
@@ -176,12 +127,12 @@
 
             </div>
           </a>
-          <a href="#" class="btn">Select Options</a>
+          <a data-toggle="modal" href="#productModal" class="btn">Select Options</a>
 
         </div>
 
         <div class="productitem">
-          <a href="#">
+          <a data-toggle="modal" href="#productModal">
             <div class="productimg1x1">
               <img class="productimg" src="./images/products/combos-2donuts1colddrink.png"
                 alt="2 Donuts & Cold Beverage Combo" style="width:100%">
@@ -193,15 +144,15 @@
 
             </div>
           </a>
-          <a href="#" class="btn">Select Options</a>
+          <a data-toggle="modal" href="#productModal" class="btn">Select Options</a>
 
         </div>
 
         <div class="productitem">
-          <a href="#">
+          <a data-toggle="modal" href="#productModal">
             <div class="productimg1x1">
-              <img class="productimg" src="./images/products/donut-strawberry frosted.png"
-                alt="Strawberry Frosted Donut" style="width:100%">
+              <img class="productimg" src="./images/products/donut-strawberryfrosted.png" alt="Strawberry Frosted Donut"
+                style="width:100%">
             </div>
             <div class="producttext">
               <h5 class="product-title">Strawberry Frosted Donut</h5>
@@ -210,7 +161,7 @@
 
             </div>
           </a>
-          <a href="#" class="btn">Add to Cart</a>
+          <a data-toggle="modal" href="#productModal" class="btn">Add to Cart</a>
 
         </div>
 
@@ -233,13 +184,13 @@
         <a href="order.html#giftcards" class="btn btn-outline">Buy Giftcards</a>
       </div>
 
-      <div class="cta-container orange">
+      <div class="cta-container orange careers">
         <h4 class="cta-title"><img src="./images/icons/user.svg" alt="Careers" /> Careers</h4>
         <p class="cta-text">Join our team and become part of the Dunkin’ family!!</p>
         <a href="careers.html" class="btn btn-outline">View Jobs</a>
       </div>
 
-      <div class="cta-container">
+      <div class="cta-container faq">
         <h4 class="cta-title"><img src="./images/icons/faq.svg" alt="FAQs" /> FAQs</h4>
         <p class="cta-text">Got some questions about us
           or our products?</p>
@@ -249,6 +200,233 @@
     </section>
 
   </main>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <form>
+        <div class="modal-header">
+          <div class="closecontainer">
+          <button type="button" class="modalclose" data-dismiss="modal"><img src="./images/icons/close.svg"></button>
+        </div>
+          <h1 class="modal-title">12 Pack Donuts</h1>
+        </div>
+        <div class="modal-body">
+          <div class="productimgcontainer">
+            <img class="modalproductimg" src="./images/products/packs-donuts12.png"
+              alt="12 Pack Donuts">
+            </div>
+          <div class="selectionheader">
+            <h5>Select 12 donuts</h5>
+            <div class="selectioncount">0 of 12 selected</div>
+          </div>
+          <ul class="flavour donut-flavour">
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-glazed.png" />
+              Glazed
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-frenchcruller.png" />
+              French Cruller
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolateglazed.png" />
+              Chocolate Glazed
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-glazedcake.png" />
+              Glazed Cake
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-bavariankreme.png" />
+              Bavarian Kreme
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-applenspice.png" />
+              Apple n Spice
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-jelly.png" />
+              Jelly
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-bostonkreme.png" />
+              Boston Kreme
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-lemon.png" />
+              Lemon
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-strawberry.png" />
+              Strawberry
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-blackraspberry.png" />
+              Black Raspberry
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolatekreme.png" />
+              Chocolate Kreme
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-strawberryfrosted.png" />
+              Strawberry Frosted
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolatefrosted.png" />
+              Chocolate Frosted
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-vanillafrosted.png" />
+              Vanilla Frosted
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-maplefrosted.png" />
+              Maple Frosted
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolateconfetti.png" />
+              Chocolate Confetti
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolatebutternut.png" />
+              Chocolate Butternut
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-butternut.png" />
+              Butternut
+            </li>
+            <li>
+              <div class="qty-number">
+                <span class="minus"><img src="./images/icons/minus.svg" /></span>
+                <input type="text" value="0" />
+                <span class="plus"><img src="./images/icons/plus.svg" /></span>
+              </div>
+              <img class="thumb" src="./images/products/donut-chocolatecoconut.png" />
+              Chocolate Coconut
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-footer-content">
+          <div class="qty-number">
+            <h5>Pack Quantity</h5>
+            <div>
+            <span class="minus"><img src="./images/icons/minus.svg" /></span>
+            <input type="text" value="1" />
+            <span class="plus"><img src="./images/icons/plus.svg" /></span>
+          </div>
+          </div>
+          <div class="sidebysidebtns">
+          <button type="button" class="btn-outline" data-dismiss="modal" onclick="this.form.reset();">Cancel</button>
+          <a class="btn btn-primary" href="order.html#cart">Add to Cart</a>
+        </div>
+      </div>
+        </div>
+      </form>
+      </div>
+
+    </div>
+  </div>
 
 
   <!-- another main for other page 

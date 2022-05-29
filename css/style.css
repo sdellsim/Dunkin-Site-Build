@@ -126,6 +126,7 @@ a.btn {
     font-size: 1rem;
     border: 2px solid var(--primary-color);
     white-space: nowrap;
+    cursor: pointer;
 }
 
 button:hover,
@@ -134,6 +135,12 @@ a.btn:hover,
 a.btn:focus {
     background: var(--primary-color-hover);
     border-color: (--primary-color-hover);
+}
+
+.btn-outline{
+    border-color: var(--primary-color-hover);
+    color: var(--primary-color);
+    background-color: transparent;
 }
 
 .btn-outline:hover,
@@ -258,7 +265,8 @@ width: 100%;
     position: relative;
     width: 100%;
     padding-top: 100%;
-    /* 1:1 ratio */
+    text-align: center;
+    /* this div exists for 1:1 ratio */
 }
 
 .productimg
@@ -270,10 +278,129 @@ width: 100%;
     bottom: 0;
     right: 0;
     text-align: center;
+    width: 100%;
 }
 
 .producttext {
     padding: 0 0px 20px 0px;
+}
+
+.modal .closecontainer
+{
+    text-align: right;
+}
+
+.modalclose
+{
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    border: 0;
+    text-align: right;
+    cursor: pointer;
+}
+
+.modalclose:hover, .modalclose:active, .modalclose:focus
+{
+    background: none;
+}
+
+.modal h1{
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.modal-body .productimgcontainer {
+    width: 100%;
+text-align: center;
+
+}
+
+.modalproductimg{
+    width: 80%;
+}
+
+.selectionheader {
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.selectioncount
+{
+    padding: 2px 15px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.flavour {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.donut-flavour li
+{
+   display: flex; 
+    align-items:center;
+    padding: 5px 0 5px 0;
+    margin:0;
+    gap: 10px;
+}
+
+.qty-number
+{
+    white-space: nowrap;
+    display: flex;
+    gap: 5px;
+}
+
+.qty-number input
+{
+padding: 0px;
+width: 24px;  
+text-align: center;
+border: 0;
+}
+
+.qty-number img{
+    width: 18px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+img.thumb
+{
+    width: 40px;
+    height: auto;
+}
+
+.modal-footer-content
+{
+    border-top: 1px solid #C4C4C4;
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-footer-content .qty-number{
+    gap: 10px;
+}
+
+.sidebysidebtns
+{
+display: flex;
+gap:10px;
 }
 
 /* order details box */
@@ -372,7 +499,7 @@ ul.twocolorderonline {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
     flex-grow: 1;
 }
 
@@ -390,6 +517,11 @@ ul.twocolorderonline {
     {
         padding-left: 32px;
         padding-right: 32px;
+    }
+
+    footer 
+    {
+        margin-top: 0;
     }
 
     .productnav {
@@ -472,6 +604,16 @@ ul.twocolorderonline {
     header nav ul li a {
         font-size: 1.25rem;
         padding: 0px;
+    }
+
+    .careers
+    {
+        background-color: var(--primary-color);
+    }
+
+    .faq
+    {
+        background-color: var(--secondary-color);
     }
 
 
@@ -557,8 +699,29 @@ ul.twocolorderonline {
     gap: 15px;
 }
 
+.flavour {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+.modal-footer-content .qty-number h5
+{
+    display: none;
+}
+
 #bottomctas {
     grid-template-columns: repeat(1, 1fr);
+}
+
+.careers
+{
+    background-color: var(--secondary-color);
+}
+
+.faq
+{
+    background-color: var(--primary-color);
 }
 
 footer ul.footernavitems {
