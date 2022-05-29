@@ -16,3 +16,14 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+// hamburger menu from https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp
+
+function openNav() {
+    document.getElementById("mobileMenu").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mobileMenu").style.width = "0";
+  }

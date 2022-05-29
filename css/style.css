@@ -49,6 +49,11 @@ main.twocol-content
     display: flex;
 }
 
+.mobilemenubtn, .mobilemenu
+{
+    display: none;
+}
+
 /* general css */
 
 h1,
@@ -671,6 +676,58 @@ ul.twocolorderonline {
     header #headernav ul li {
         padding: 0px;
     }
+
+    .headerleft {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobilemenubtn, .mobilemenu
+    {
+        display: block;
+    }
+
+    .mobilemenu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+      }
+      
+      .mobilemenu a {
+        padding: 10px 10px 10px 40px;
+        text-decoration: none;
+        font-size: 1.25rem;;
+        font-weight: bold;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+      
+      .mobilemenu a:hover {
+        color: #ffff;
+      }
+      
+      .mobilemenu .closebtn {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+        padding: 0px;
+      }
+
+      .mobilemenu .closebtn img {
+          width: 24px;
+      }
+
 
 
 
