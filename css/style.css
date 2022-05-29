@@ -315,6 +315,7 @@ flex-grow: 1;
 
 .cta-title img {
     height: 34px;
+    vertical-align:-15%;
 }
 
 
