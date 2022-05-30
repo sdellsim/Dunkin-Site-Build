@@ -236,6 +236,53 @@ nav.productnav ul li:last-child
     display: none;
 }
 
+.callout {
+    position: absolute;
+    right: 0;
+    margin: -1px 40px 0px 0px;
+    padding: 16px 16px 20px 16px;
+    box-sizing: border-box;
+    background: var(--secondary-color);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.callout img{
+    height: 68px;
+}
+
+.callout::after /* callout arrow */
+{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 55%;
+    box-sizing: border-box;
+    border: 0.5em solid #000;
+    border-color: transparent transparent var(--secondary-color) var(--secondary-color);
+    transform-origin: 0 0;
+    transform: rotate(135deg);
+    box-shadow: -3px 3px 4px 0 rgba(0,0,0,.08);
+}
+
+.callout button {
+    margin-top: 10px;
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.callout
+{
+    display: none;
+}
+
 /* footer nav styles is under footer css section */
 
 /* heroimg */
@@ -535,6 +582,8 @@ ul.twocolorderonline {
     }
 
 
+
+
 }
 
 
@@ -556,6 +605,17 @@ ul.twocolorderonline {
 
 
 }
+
+/******* 962px wide and below show nav callout *******/
+
+@media only screen and (max-width: 962px) {
+
+
+.callout{
+    display: block;
+}
+}
+
 
 
 
@@ -727,6 +787,8 @@ ul.twocolorderonline {
       .mobilemenu .closebtn img {
           width: 24px;
       }
+
+
 
 
 
