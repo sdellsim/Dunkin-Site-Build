@@ -1,0 +1,339 @@
+<!-- This is a student project for Yoobee School of Design -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dunkin' NZ - Shop Online for Pick-up & Delivery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/modal/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/modal/bootstrap.min.js"></script>
+    <script src="./js/js.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="fixed">
+        <header>
+            <div class="widthlimit">
+                <div class="headerleft">
+                    <a href="index.html">
+                        <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
+                    </a>
+                    <a class="mobilemenubtn" onclick="openNav()"><img src="./images/icons/hamburgermenu.svg" /></a>
+                </div>
+
+                <div id="mobileMenu" class="mobilemenu">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img
+                            src="./images/icons/close-white.svg" /></a>
+                    <a href="order.html">Order Online</a>
+                    <a href="locations.html">Find a Store</a>
+                    <a href="about.html">About Dunkin'</a>
+                    <a href="ddperks.html">DD Perks</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+
+                <div class="headerright">
+                    <nav id="headernav">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html">Order Online</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="locations.html">Find a Store</a>
+                            </li>
+                    </nav>
+
+                    <form id="headersearch" role="search">
+                        <div class="desktopview">
+                            <input type="text" class="search" placeholder="Type a keyword..." name="search"><button
+                                type="submit" class="btn btn-primary search">Search</button>
+                        </div>
+                        <div class="tabletview">
+                            <a href="#"><img src="./images/icons/search.svg" /></a>
+                        </div>
+                        <div class="mobileview">
+                            <a href="#"><img src="./images/icons/search.svg" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <nav class="productnav widthlimit">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#donuts">Donuts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#munchkins">Munchkins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#fancies">Fancies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#packs">Packs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#DDcombos">DD Combos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#hotbeverages">Hot Beverages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#coldbeverages">Cold Beverages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html#giftcards">Giftcards</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+    </div>
+
+
+    <main class="widthlimit">
+
+        <section class="contactlocation staticcontent narrow">
+            <div>
+
+                <h1>Find a Store</h1>
+
+                <h5>Search Store</h5>
+                <label for="branchaddress">Search store</label>
+                <input type="text" name="branchaddress" class="branchsearch" placeholder="Enter your town or city" />
+
+
+                <div id="storeslist">
+                    <h5>Stores</h5>
+                    <div class="sortbyfilter">
+                        <div class="sortby">
+                        <label for="sortby">Sort by</label>
+                        <select id="sortby" name="sortby">
+                            <option value="branch">Location Name</option>
+                            <option value="city">City</option>
+                        </select>
+                    </div>
+<div class="filter">
+                        <label for="filter">Filter</label>
+                        <select id="filter" name="filter">
+                            <option value="">Show all stores</option>
+                            <option value="1May">Show open stores</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="storebranch">
+                    <div class="storedetails">
+                        <h6>Auckland Airport Domestic Terminal</h6>
+                        Andrew McKee Avenue, Mangere, Auckland<br />
+                        Phone: <a class="underlined" href="tel:021374981">021 374981</a>
+                    </div>
+                    <div class="storestatus">
+                        <div class="storeclosed">  Closed</div>
+                        <div class="openclosetime">Opens 7:00am</div>
+                        <a class="btn" href="order.html">Order for later</a>
+                    </div>
+                </div>
+
+                <div class="storebranch">
+                    <div class="storedetails">
+                        <h6>Auckland Airport Store (Leonard Issit Drive)</h6>
+                        1 Leonard Isitt Drive, Auckland Airport, Auckland<br />
+                        Phone: <a class="underlined" href="tel:092574441">09 257 4441</a>
+                    </div>
+                    <div class="storestatus">
+                        <div class="storeopen">  Open</div>
+                        <div class="openclosetime">Closes 9:00pm</div>
+                        <a class="btn" href="order.html">Order now</a>
+                    </div>
+                </div>
+
+                <div class="storebranch">
+                    <div class="storedetails">
+                        <h6>Botany</h6>
+                        451 Ti Rakau Drive, Golflands, Auckland<br />
+                        Phone: <a class="underlined" href="tel:0927409030">09 27409030</a>
+                    </div>
+                    <div class="storestatus">
+                        <div class="storeclosed">  Closed</div>
+                        <div class="openclosetime">Opens 8:00am</div>
+                        <a class="btn" href="order.html">Order for later</a>
+                    </div>
+                </div>
+
+                <div class="storebranch">
+                    <div class="storedetails">
+                        <h6>Lincoln Road
+                        </h6>
+                        Lincoln North Shopping Centre, Henderson, Auckland<br />
+                        Phone: <a class="underlined" href="tel:098353956">09 835 3956</a>
+                    </div>
+                    <div class="storestatus">
+                        <div class="storeopen">  Open</div>
+                        <div class="openclosetime">Closes 9:00pm</div>
+                        <a class="btn" href="order.html">Order now</a>
+                    </div>
+                </div>
+
+
+
+
+
+        </section>
+
+
+        <section id="bottomctas">
+
+            <div class="cta-container orange">
+                <h4 class="cta-title"><img class="ddperkscta" src="./images/brand/ddperkslogo-white.png"
+                        alt="DDPerks" /></h4>
+                <p class="cta-text">Sign up and earn reward points
+                    on every spend!</p>
+                <a href="ddperks.html" class="btn-outline">Sign Up</a>
+            </div>
+
+            <div class="cta-container">
+                <h4 class="cta-title"><img src="./images/icons/giftcard.svg" alt="Giftcards" /> Giftcards</h4>
+                <p class="cta-text">Stop the guessing game and give them the gift of choice!</p>
+                <a href="order.html#giftcards" class="btn-outline">Buy Giftcards</a>
+            </div>
+
+            <div class="cta-container orange careers">
+                <h4 class="cta-title"><img src="./images/icons/user.svg" alt="Careers" /> Careers</h4>
+                <p class="cta-text">Join our team and become part of the Dunkin’ family!</p>
+                <a href="careers.html" class="btn-outline">View Jobs</a>
+            </div>
+
+            <div class="cta-container faq">
+                <h4 class="cta-title"><img src="./images/icons/faq.svg" alt="FAQs" /> FAQs</h4>
+                <p class="cta-text">Got some questions about us
+                    or our products?</p>
+                <a href="faq.html" class="btn-outline">Check our FAQs</a>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="widthlimit">
+
+            <nav id="footernav">
+                <ul class="footernavitems">
+                    <li id="orderonline">
+                        <h5>Order Online</h5>
+                        <ul class="nav twocolorderonline">
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#donuts">Donuts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#munchkins">Munchkins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#fancies">Fancies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#packs">Packs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#DDcombos">DD Combos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#hotbeverages">Hot Beverages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#coldbeverages">Cold Beverages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.html#giftcards">Giftcards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orderinfo.html#terms">Terms & Conditions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orderinfo.html#refunds">Refunds</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orderinfo.html#cancellations">Cancellations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orderinfo.html#deliveries">Deliveries</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li id="aboutus">
+                        <h5>About Us</h5>
+                        <ul class="nav aboutus">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Dunkin'</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="locations.html">Store Locations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ddperks.html">DD Perks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="careers.html">Careers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li id="followus">
+                        <h5>Follow Us</h5>
+                        <ul class="nav followus">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/DunkinDonutsNZ/"
+                                    target="_blank">Facebook</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/dunkinnz/"
+                                    target="#blank">Instagram</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://twitter.com/dunkinnz?lang=en"
+                                    target="_blank">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <div class="footerlogo">
+                <a href="index.html" class="text-dark text-decoration-none">
+                    <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
+                </a>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

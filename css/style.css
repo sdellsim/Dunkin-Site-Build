@@ -72,6 +72,20 @@ div.twocol-content {
     display: none;
 }
 
+.narrow
+{
+    
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
 /* general css */
 
 h1,
@@ -131,7 +145,7 @@ input,
 select {
     border: 1px solid #C4C4C4;
     border-radius: 60px;
-    padding: 9px 20px;
+    padding: 11px 20px;
     background: #fff;
     font-size: 1rem;
     color: #000;
@@ -757,6 +771,129 @@ input[type=submit]:disabled {
 }
 
 
+/* Locations css */
+
+.contactlocation h1
+{
+    margin-bottom: 20px;
+}
+
+.contactlocation h5
+{   
+    margin-bottom: 10px;
+}
+
+.contactlocation input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contactlocation h1 
+{
+   text-align: center;
+}
+
+.branchsearch
+{
+    background: url(../images/icons/search.svg) no-repeat 15px;
+    padding-left: 50px;
+}
+
+#storeslist
+{
+    display: flex;
+    justify-content:space-between;
+    gap: 16px;
+    align-items: center;
+    margin-top: 45px;
+    padding-bottom: 20px;
+}
+
+#storeslist .sortbyfilter
+{
+    display: flex;
+    gap: 16px;
+}
+
+#storeslist label {
+    border: 0;
+    clip:auto;
+    height: auto;
+    margin: 0px;
+    overflow:unset;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+    width: auto;
+}
+
+#storeslist select
+{
+padding-right: 40px;
+}
+
+.sortbyfilter label
+{
+padding: 0 !important;
+margin: 0 !important;
+white-space: nowrap;
+}
+
+.sortbyfilter select {
+    width: 100%;
+}
+
+.sortby, .filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.storebranch
+{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid #c4c4c4;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+}
+
+
+
+.storestatus
+{
+    text-align: right;
+}
+
+.storeopen, .storeclosed
+{
+    font-weight: bold;
+}
+
+.storeopen::before
+{
+    content:url('../images/icons/storeopen.svg');
+    vertical-align: -15%;
+}
+
+.storeclosed::before
+{
+    content:url('../images/icons/storeclosed.svg');
+    vertical-align: -15%;
+}
+
+.openclosetime
+{
+    margin-bottom:20px;
+}
+
+.storedetails a.underlined {
+    color: #000;
+}
+
+
 /* bottom ctas */
 #bottomctas {
     margin-top: 60px;
@@ -1019,6 +1156,7 @@ ul.twocolorderonline {
     .productlist,
     .twocol-content,
     .shop,
+    .staticcontent,
     footer {
         padding-left: 22px;
         padding-right: 22px;
@@ -1163,6 +1301,34 @@ ul.twocolorderonline {
     .faq {
         background-color: var(--dunkin-pink);
     }
+
+
+.narrow
+{
+    margin-top: 40px;
+}
+
+    
+        #storeslist,
+        .sortbyfilter
+        {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+ 
+        }
+    
+     #storeslist h5
+        {
+            margin-top: 0px;
+            text-align:left;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+    
+
+
+
 
     footer ul.footernavitems {
         display: grid !important;
