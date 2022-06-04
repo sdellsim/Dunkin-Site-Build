@@ -75,7 +75,7 @@ div.twocol-content {
 .narrow
 {
     
-    max-width: 700px;
+    max-width: 984px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
@@ -104,6 +104,12 @@ h1 {
     font-size: 2.375rem;
     color: var(--dunkin-orange);
 
+}
+
+.narrow h1 
+{
+   text-align: center;
+   margin-bottom: 20px;
 }
 
 h2 {
@@ -375,7 +381,7 @@ nav.productnav ul li:last-child {
     background: transparent;
 }
 
-.callout.mobilenav {
+#calloutmobilenav {
     display: none;
 }
 
@@ -735,7 +741,7 @@ a.anchor
 
 #emptycart, p#emptycart-modal
 {
-    display: none;
+    display: none; 
     text-align: center;
 }
 
@@ -761,22 +767,21 @@ input[type=submit]:disabled {
 .ourstory
 {
 
-    display: flex;
-    gap: 32px;
-    align-items: center;
+
 }
 
 .ourstory img{
-    width: 400px;
+    width: 100%;
+}
+
+.ourstory p
+{
+    margin: 30px 0px 30px 0px;
 }
 
 
 /* Locations css */
 
-.contactlocation h1
-{
-    margin-bottom: 20px;
-}
 
 .contactlocation h5
 {   
@@ -788,10 +793,7 @@ input[type=submit]:disabled {
     margin-bottom: 10px;
 }
 
-.contactlocation h1 
-{
-   text-align: center;
-}
+
 
 .branchsearch
 {
@@ -1047,7 +1049,7 @@ ul.twocolorderonline {
 @media only screen and (max-width: 962px) {
 
 
-    .callout.mobilenav {
+    #calloutmobilenav {
         display: block;
     }
 
@@ -1113,7 +1115,7 @@ ul.twocolorderonline {
     button,
     a.btn,
     a.btn-outline,
-    .btn.btn-outline,
+    button.btn-outline,
     .btn-outline
     {
         padding: 10px 20px;

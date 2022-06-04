@@ -59,6 +59,7 @@
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   outline: 0;
+  margin-top: 20px; /*added this for a bit of margin */
 }
 .modal-backdrop {
   position: fixed;
@@ -182,3 +183,5 @@
 .affix {
   position: fixed;
 }
+
+
