@@ -1049,9 +1049,9 @@ ul.twocolorderonline {
 @media only screen and (max-width: 962px) {
 
 
-    #calloutmobilenav {
+/*    #calloutmobilenav {
         display: block;
-    }
+    } */
 
     .leftcol .productsgrid {
         grid-template-columns: repeat(2, 1fr);
