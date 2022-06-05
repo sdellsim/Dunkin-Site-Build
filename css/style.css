@@ -49,8 +49,7 @@ html, body {
 
 main {
     padding-top: 130px;
-    min-width: 375px;
-    /* iphone se */
+   min-width: 375px; /* iphone se */
 }
 
 main.staticcontent
@@ -968,6 +967,7 @@ footer ul li {
     font-weight: normal;
     font-size: .875rem;
     flex-grow: 1;
+    white-space: nowrap;
 }
 
 footer h5 {
@@ -1309,6 +1309,11 @@ ul.twocolorderonline {
 .narrow
 {
     margin-top: 40px;
+}
+
+.narrow h1
+{
+    text-align: left;
 }
 
     
