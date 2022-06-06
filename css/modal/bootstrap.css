@@ -75,8 +75,8 @@
   opacity: 0;
 }
 .modal-backdrop.in {
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
 }
 .modal-header {
   padding: 16px 16px 0px 16px;
@@ -183,5 +183,4 @@
 .affix {
   position: fixed;
 }
-
-
+}

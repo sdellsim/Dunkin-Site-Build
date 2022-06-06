@@ -247,7 +247,7 @@ button.btn-outline:focus,
 
 label {
     border: 0;
-    clip: rect(0 0 0 0);
+/*    clip: rect(0 0 0 0); */
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -639,6 +639,7 @@ a.underlined {
     position: relative;
     width: 1px !important;
     display: inline;
+    visibility:hidden;
 }
 
 
@@ -721,7 +722,7 @@ a.anchor
     border-color: transparent transparent #fff #fff;
     transform-origin: 0 0;
     transform: rotate(225deg);
-    box-shadow: -3px 3px 4px 0 rgba(, 0, 0, .08);
+    box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, .08);
 }
 
 #orderdetails .callout.itemadded h5 {
@@ -819,7 +820,6 @@ input[type=submit]:disabled {
 
 #storeslist label {
     border: 0;
-    clip:auto;
     height: auto;
     margin: 0px;
     overflow:unset;
@@ -1252,7 +1252,7 @@ ul.twocolorderonline {
     }
 
     main.home {
-        padding-top: 130px;
+        padding-top: 180px;
     }
 
 

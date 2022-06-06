@@ -3,14 +3,10 @@
 <html lang="en">
 
 <head>
-    <title>Dunkin' NZ - Shop Online for Pick-up & Delivery</title>
+    <title>Dunkin' NZ - Contact us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./css/modal/bootstrap.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/modal/bootstrap.min.js"></script>
-    <script src="./js/js.js"></script>
 
 </head>
 
@@ -24,12 +20,13 @@
                     <a href="index.html">
                         <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
                     </a>
-                    <a class="mobilemenubtn" onclick="openNav()"><img src="./images/icons/hamburgermenu.svg" /></a>
+                    <a class="mobilemenubtn" onclick="openNav()"><img src="./images/icons/hamburgermenu.svg"
+                            alt="Open Menu" /></a>
                 </div>
 
                 <div id="mobileMenu" class="mobilemenu">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img
-                            src="./images/icons/close-white.svg" /></a>
+                            src="./images/icons/close-white.svg" alt="Close Menu" /></a>
                     <a href="order.html">Order Online</a>
                     <a href="locations.html">Find a Store</a>
                     <a href="about.html">About Dunkin'</a>
@@ -48,6 +45,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="locations.html">Find a Store</a>
                             </li>
+                        </ul>
                     </nav>
 
                     <form id="headersearch" role="search">
@@ -56,10 +54,10 @@
                                 type="submit" class="btn btn-primary search">Search</button>
                         </div>
                         <div class="tabletview">
-                            <a href="#"><img src="./images/icons/search.svg" /></a>
+                            <a href="#"><img src="./images/icons/search.svg" alt="Search" /></a>
                         </div>
                         <div class="mobileview">
-                            <a href="#"><img src="./images/icons/search.svg" /></a>
+                            <a href="#"><img src="./images/icons/search.svg" alt="Search" /></a>
                         </div>
                     </form>
                 </div>
@@ -110,26 +108,26 @@
 
                 <h5>Search Store</h5>
                 <label for="branchaddress">Search store</label>
-                <input type="text" name="branchaddress" class="branchsearch" placeholder="Enter your town or city" />
+                <input type="text" name="branchaddress" class="branchsearch" id="branchaddress" placeholder="Enter your town or city" />
 
 
                 <div id="storeslist">
                     <h5>Stores</h5>
                     <div class="sortbyfilter">
                         <div class="sortby">
-                        <label for="sortby">Sort by</label>
-                        <select id="sortby" name="sortby">
-                            <option value="branch">Location Name</option>
-                            <option value="city">City</option>
-                        </select>
-                    </div>
-<div class="filter">
-                        <label for="filter">Filter</label>
-                        <select id="filter" name="filter">
-                            <option value="">Show all stores</option>
-                            <option value="1May">Show open stores</option>
-                        </select>
-                    </div>
+                            <label for="sortby">Sort by</label>
+                            <select id="sortby" name="sortby">
+                                <option value="branch">Location Name</option>
+                                <option value="city">City</option>
+                            </select>
+                        </div>
+                        <div class="filter">
+                            <label for="filter">Filter</label>
+                            <select id="filter" name="filter">
+                                <option value="">Show all stores</option>
+                                <option value="1May">Show open stores</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -141,7 +139,7 @@
                         Phone: <a class="underlined" href="tel:021374981">021 374981</a>
                     </div>
                     <div class="storestatus">
-                        <div class="storeclosed">  Closed</div>
+                        <div class="storeclosed"> Closed</div>
                         <div class="openclosetime">Opens 7:00am</div>
                         <a class="btn" href="order.html">Order for later</a>
                     </div>
@@ -154,7 +152,7 @@
                         Phone: <a class="underlined" href="tel:092574441">09 257 4441</a>
                     </div>
                     <div class="storestatus">
-                        <div class="storeopen">  Open</div>
+                        <div class="storeopen"> Open</div>
                         <div class="openclosetime">Closes 9:00pm</div>
                         <a class="btn" href="order.html">Order now</a>
                     </div>
@@ -167,7 +165,7 @@
                         Phone: <a class="underlined" href="tel:0927409030">09 27409030</a>
                     </div>
                     <div class="storestatus">
-                        <div class="storeclosed">  Closed</div>
+                        <div class="storeclosed"> Closed</div>
                         <div class="openclosetime">Opens 8:00am</div>
                         <a class="btn" href="order.html">Order for later</a>
                     </div>
@@ -181,7 +179,7 @@
                         Phone: <a class="underlined" href="tel:098353956">09 835 3956</a>
                     </div>
                     <div class="storestatus">
-                        <div class="storeopen">  Open</div>
+                        <div class="storeopen"> Open</div>
                         <div class="openclosetime">Closes 9:00pm</div>
                         <a class="btn" href="order.html">Order now</a>
                     </div>
@@ -190,7 +188,7 @@
 
 
 
-
+            </div>
         </section>
 
 
@@ -324,7 +322,7 @@
 
             <div class="footerlogo">
                 <a href="index.html" class="text-dark text-decoration-none">
-                    <img id="headerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
+                    <img id="footerlogo" src="./images/brand/dunkinlogo.svg" alt="Dunkin' NZ" />
                 </a>
             </div>
 
