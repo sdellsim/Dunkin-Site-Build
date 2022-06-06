@@ -49,7 +49,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="locations.html">Find a Store</a>
                             </li>
-                            </ul>
+                        </ul>
                     </nav>
 
                     <form id="headersearch" role="search">
@@ -209,19 +209,56 @@
 
             <section id="orderdetails">
                 <h4>Your Order</h4>
+
+                <form id="loginsignup">
+                    <h5>Log In / Sign up</h5>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="email" name="email" placeholder="Email" />
+
+
+                    <div id="signupfields">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" />
+
+                        <label for="phonenumber">Phone number</label>
+                        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" />
+                    </div>
+
+
+                    <div id="loginfields">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" />
+                        <input type="submit" class="btn" value="Login" />
+
+                    </div>
+
+                    <a href="javascript:guestCheckout()" class="underlined">Order as Guest instead?</a>
+
+                </form>
+
                 <form>
 
-                    <h5>Log In / Sign up</h5>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" />
+                    <div id="guestcheckout">
+                        <h5>Checkout as Guest</h5>
 
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" />
+                        <label for="guestemail">Email</label>
+                        <input type="email" id="guestemail" name="email" placeholder="Email" />
 
-                    <label for="phonenumber">Phone number</label>
-                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" />
 
-                    <a href="#" class="underlined">Order as Guest instead?</a>
+                        <label for="guestfullname">Full Name</label>
+                        <input type="text" id="guestfullname" name="fullname" placeholder="Full Name" />
+
+                        <label for="guestphonenumber">Phone number</label>
+                        <input type="tel" id="guestphonenumber" name="phonenumber" placeholder="Phone number" />
+
+                        <a href="javascript:loginsignuptCheckout()" class="underlined">Log in / Sign up instead?</a>
+
+                    </div>
+
+
+
+
 
                     <h5>Set your Store</h5>
                     <label for="store">Store</label>
@@ -231,13 +268,12 @@
                     <h5>Pick-up or Delivery?</h5>
 
                     <div class="radiotoggle">
-                        <input type="radio" class="btn-check" name="pickupdelivery" id="pick-up" >
+                        <input type="radio" class="btn-check" name="pickupdelivery" id="pick-up">
                         <label for="pick-up" class="pickupdeliverybtn" id="pickupbtn"
                             onclick="getElementById('deliveryaddress-container').style.display = 'none';">Pick-up <img
                                 src="./images/icons/tick-white.svg" alt="icon" /></label>
 
-                        <input type="radio" class="btn-check" name="pickupdelivery" id="delivery" 
-                            checked>
+                        <input type="radio" class="btn-check" name="pickupdelivery" id="delivery" checked>
                         <label for="delivery" class="pickupdeliverybtn" id="deliverybtn"
                             onclick="getElementById('deliveryaddress-container').style.display = 'block';">Delivery <img
                                 src="./images/icons/tick-white.svg" alt="icon" /></label>
@@ -300,12 +336,12 @@
                         <div class="cart-item">
                             <a data-toggle="modal" href="#productModal">
                                 <div class="cart-item-name">
-                                    1x Two Donuts & Cold Beverage Combo
+                                    12 Pack Donuts
                                     <div class="cart-item-desc">5 Jelly, 4 Strawberry, 3 Glazed</div>
                                 </div>
                             </a>
                             <div class="cart-item-price">
-                                $16
+                                $25.60
                             </div>
 
                             <div class="delete"><img onclick="deletecartitem()" src="./images/icons/close.svg"
@@ -315,7 +351,7 @@
 
                         <div class="cart-total">
                             <div>Total</div>
-                            <div class="totalprice">$16.00</div>
+                            <div class="totalprice">$25.60</div>
                         </div>
 
                     </div>
@@ -608,7 +644,8 @@
                                     <div class="sidebysidebtns">
                                         <button type="button" class="btn-outline" data-dismiss="modal"
                                             onclick="this.form.reset();">Cancel</button>
-                                        <a class="btn" href="addedtocart.html#cart">Add to Cart</a>
+                                        <a class="btn" href="addedtocart.html#cart" onclick="addtocart()">Add to
+                                            Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -639,22 +676,21 @@
                             <div id="filledcart-modal">
 
                                 <div class="cart-item">
-                                    <a data-dismiss="modal" data-toggle="modal"
-                                        href="#productModal">
+                                    <a data-dismiss="modal" data-toggle="modal" href="#productModal">
                                         <div class="cart-item-name">
-                                            1x Two Donuts & Cold Beverage Combo
+                                            12 Pack Donuts
                                             <div class="cart-item-desc">5 Jelly, 4 Strawberry, 3 Glazed</div>
                                         </div>
                                     </a>
                                     <div class="cart-item-price">
-                                        $16
+                                        $25.60
                                     </div>
                                     <div class="delete"><img onclick="deletecartitem()" src="./images/icons/close.svg"
                                             alt="Delete item" /></div>
                                 </div>
                                 <div class="cart-total">
                                     <div>Total</div>
-                                    <div class="totalprice">$16.00</div>
+                                    <div class="totalprice">$25.60</div>
                                 </div>
 
                             </div>
@@ -692,27 +728,75 @@
                                 <button type="button" class="modalclose" data-dismiss="modal"><img
                                         src="./images/icons/close.svg" alt="Close" /></button>
                             </div>
-                            <h5>Log In / Sign up</h5>
+
                         </div>
 
 
                         <div class="modal-body">
 
-                            <label for="m-email">Email</label>
-                            <input type="email" id="m-email" name="email" placeholder="Email" />
+                            <form id="m-loginsignup">
+                                <h5>Log In / Sign up</h5>
 
-                            <label for="m-fullname">Full Name</label>
-                            <input type="text" id="m-fullname" name="fullname" placeholder="Full Name" />
+                                <label for="m-email">Email</label>
+                                <input type="email" id="m-email" class="email" name="email" placeholder="Email" />
 
-                            <label for="m-phonenumber">Phone number</label>
-                            <input type="tel" id="m-phonenumber" name="phonenumber" placeholder="Phone number" />
 
-                            <a href="#" class="underlined">Order as Guest instead?</a>
+                                <div id="m-signupfields">
+                                    <label for="m-fullname">Full Name</label>
+                                    <input type="text" id="m-fullname" name="fullname" placeholder="Full Name" />
+
+                                    <label for="m-phonenumber">Phone number</label>
+                                    <input type="tel" id="m-phonenumber" name="phonenumber"
+                                        placeholder="Phone number" />
+                                </div>
+
+
+                                <div id="m-loginfields">
+                                    <label for="m-password">Password</label>
+                                    <input type="password" id="m-password" placeholder="Password" />
+                                    <input type="submit" class="btn" value="Login" />
+
+                                </div>
+
+                                <a href="javascript:mguestCheckout()" class="underlined">Order as Guest instead?</a>
+
+                            </form>
+
+
+
+
+                            <form id="m-guestcheckout">
+                                <h5>Checkout as Guest</h5>
+
+                                <label for="m-guestemail">Email</label>
+                                <input type="email" id="m-guestemail" name="email" placeholder="Email" />
+
+
+                                <label for="m-guestfullname">Full Name</label>
+                                <input type="text" id="m-guestfullname" name="fullname" placeholder="Full Name" />
+
+                                <label for="m-guestphonenumber">Phone number</label>
+                                <input type="tel" id="m-guestphonenumber" name="phonenumber"
+                                    placeholder="Phone number" />
+
+                                <a href="javascript:mloginsignuptCheckout()" class="underlined">Log in / Sign up
+                                    instead?</a>
+
+                            </form>
 
                             <div class="sidebysidebtns fullwidth">
                                 <a class="btn-outline" data-dismiss="modal">Cancel</a>
                                 <a class="btn" href="checkout.html">Next</a>
                             </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -871,7 +955,8 @@
 
 
 
-
+    <!-- this need to be at bottom for email -->
+    <script src="./js/loginsignup.js"></script>
 
 
 

@@ -204,20 +204,57 @@
 
       <section id="orderdetails">
         <h4>Your Order</h4>
-        <form>
 
-          <h5>Log In / Sign up</h5>
+        <form id="loginsignup">
+        <h5>Log In / Sign up</h5>
+        
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Email" />
 
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" placeholder="Full Name" />
 
-          <label for="phonenumber">Phone number</label>
-          <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" />
+          <div id="signupfields">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name" />
 
-          <a href="#" class="underlined">Order as Guest instead?</a>
+            <label for="phonenumber">Phone number</label>
+            <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone number" />
+          </div>
 
+
+          <div id="loginfields">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+            <input type="submit" class="btn" value="Login" />
+
+          </div>
+
+          <a  href="javascript:guestCheckout()" class="underlined">Order as Guest instead?</a>
+
+        </form>
+
+        <form>
+
+        <div id="guestcheckout">
+          <h5>Checkout as Guest</h5>
+          
+            <label for="guestemail">Email</label>
+            <input type="email" id="guestemail" name="email" placeholder="Email" />
+  
+
+              <label for="guestfullname">Full Name</label>
+              <input type="text" id="guestfullname" name="fullname" placeholder="Full Name" />
+  
+              <label for="guestphonenumber">Phone number</label>
+              <input type="tel" id="guestphonenumber" name="phonenumber" placeholder="Phone number" />
+
+              <a  href="javascript:loginsignuptCheckout()" class="underlined" >Log in / Sign up instead?</a>
+  
+        </div>
+
+
+        
+
+        
           <h5>Set your Store</h5>
           <label for="store">Store</label>
           <input type="text" id="store" name="store" value="Henderson" disabled />
@@ -661,6 +698,10 @@
 
     </div>
   </footer>
+
+
+    <!-- this need to be at bottom for email -->
+    <script src="./js/loginsignup.js"></script>
 
 
 

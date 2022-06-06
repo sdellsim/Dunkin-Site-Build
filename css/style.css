@@ -621,6 +621,16 @@ nav.productnav ul li:last-child {
     line-height: initial;
 }
 
+#loginfields, #signupfields,
+#m-loginfields, #m-signupfields
+{
+    display: none;
+}
+
+#guestcheckout, #m-guestcheckout
+{
+    display: none;
+}
 a.underlined {
     text-decoration: underline;
     color: var(--dunkin-pink);
