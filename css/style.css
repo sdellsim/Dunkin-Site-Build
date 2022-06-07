@@ -49,7 +49,6 @@ html, body {
 
 main {
     padding-top: 130px;
-   min-width: 375px; /* iphone se */
 }
 
 main.staticcontent
@@ -195,6 +194,7 @@ select:focus {
 button,
 button.btn,
 a.btn,
+.btn,
 input[type=submit] {
     padding: 10px 28px;
     border-radius: 60px;
@@ -485,6 +485,7 @@ nav.productnav ul li:last-child {
     justify-content: space-between;
     padding-bottom: 8px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .modal .selectioncount {
@@ -494,6 +495,7 @@ nav.productnav ul li:last-child {
     border-radius: 30px;
     font-size: 0.75rem;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .flavour {
@@ -1423,7 +1425,7 @@ flex-direction: column;
 
 /*************** super small below 375px *********/
 @media only screen and (max-width: 374px) {
-    .productsgrid {
+    .leftcol .productsgrid, .productsgrid {
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
     }
@@ -1436,6 +1438,34 @@ flex-direction: column;
     header nav ul li a {
         font-size: 1rem;
         padding: 0px;
+    }
+
+    #productModal .modal-footer-content
+    {
+        flex-direction: column;
+    }
+
+    .modal-footer-content .qty-number h5
+    {
+        display: block;
+    }
+
+    .modal-footer-content .qty-number
+    {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .modal-footer-content .sidebysidebtns
+    {
+        width: 100%;
+    }
+
+    .modal-footer-content .sidebysidebtns a,
+    .modal-footer-content .sidebysidebtns button   
+    {
+        width: 100%;
+        margin-top: 10px;
     }
 
 }
