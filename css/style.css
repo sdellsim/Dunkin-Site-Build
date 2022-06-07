@@ -260,7 +260,7 @@ label {
 header {
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.05);
     display: flex;
-    padding: 20px 0 20px 0;
+ /*   padding: 20px 0 20px 0; */
 }
 
 header div {
@@ -272,7 +272,9 @@ header div {
 header div .headerleft {
     flex-shrink: 4;
     align-items: center;
+    margin-top: 4px;
 }
+
 
 header div .headerright {
     align-items: center;
@@ -280,6 +282,14 @@ header div .headerright {
 
 header nav ul {
     gap: 40px;
+    margin: 0px;
+}
+
+header nav li
+{
+    padding: 38px 0px 18px 0px;
+    margin-bottom: -4px;
+    border-bottom: 4px solid transparent;
 }
 
 header nav ul li a {
@@ -310,6 +320,7 @@ nav ul li {
 
 
 
+
 nav.productnav ul {
     justify-content: space-between;
     align-items: center;
@@ -317,7 +328,24 @@ nav.productnav ul {
     min-width: 938px;
     /*min width before nav item words goes in 2 lines*/
     box-sizing: content-box;
+    margin: 0;
 }
+
+nav.productnav .nav li
+{
+    border-bottom: 4px solid transparent;  
+    padding: 20px 0px 14px 0px;
+    margin-bottom: 4px;
+}
+
+header nav li:hover,
+nav.productnav .nav li:hover,
+li.nav-item.activepage,
+nav.productnav .nav li.activepage
+{
+    border-bottom: 4px solid var(--dunkin-orange);
+}
+
 
 nav.productnav ul li:first-child {
     padding-left: 0;
@@ -1179,7 +1207,7 @@ ul.twocolorderonline {
 
     header {
         padding-top: 22px;
-        padding-bottom: 10px;
+/*        padding-bottom: 10px; */
     }
 
     header .widthlimit {
@@ -1198,7 +1226,7 @@ ul.twocolorderonline {
 
 
     header #headernav ul li {
-        padding: 0px;
+        padding: 0px 0px 10px 0px;
     }
 
     .headerleft {
