@@ -55,8 +55,9 @@
 
           <form id="headersearch" role="search">
             <div class="desktopview">
-              <input type="text" class="search" placeholder="Type a keyword..." name="search"><button type="submit"
-                class="btn search">Search</button>
+              <label for="search">Search</label>
+              <input type="text" id="search" class="search" placeholder="Type a keyword..." 
+                name="search"><button type="submit" class="btn search">Search</button>
             </div>
             <div class="tabletview">
               <a href="#"><img src="./images/icons/search.svg" alt="Search" /></a>
@@ -99,7 +100,7 @@
     </nav>
 
     <div class="callout mobilenav" id="calloutmobilenav">
-      <img src="./images/icons/swipe-white.svg" alt="Swipe nav left & right to show more items." /><br />
+      <img src="./images/icons/swipe-white.svg" alt="" /><br />
       Swipe nav left & right to show more items.
       <button id="close-calloutmobilenav" class="btn-outline" onclick="closeCalloutmobilenav();">Got it</button>
     </div>
@@ -357,8 +358,10 @@
                 <ul class="flavour donut-flavour">
                   <li>
                     <div class="qty-number">
+  
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-glazed">Quantity</label>
+                      <input id="qty-glazed" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-glazed.png" alt="Glazed" />
@@ -367,7 +370,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-frenchcruller">Quantity</label>
+                      <input id="qty-frenchcruller" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-frenchcruller.png" alt="French Cruller" />
@@ -376,7 +380,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-chocglazed">Quantity</label>
+                      <input id="qty-chocglazed" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolateglazed.png" alt="Chocolate Glazed" />
@@ -385,7 +390,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-glazedcake">Quantity</label>
+                      <input id="qty-glazedcake" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-glazedcake.png" alt="Glazed Cake" />
@@ -394,7 +400,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-bavkreme">Quantity</label>
+                      <input id="qty-bavkreme" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-bavariankreme.png" alt="Bavarian Kreme" />
@@ -403,7 +410,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-aapspice">Quantity</label>
+                      <input id="qty-aapspice" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-applenspice.png" alt="Apple n Spice" />
@@ -412,7 +420,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-jelly">Quantity</label>
+                      <input id="qty-jelly" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-jelly.png" alt="Jelly" />
@@ -421,7 +430,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-bostonk">Quantity</label>
+                      <input id="qty-bostonk" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-bostonkreme.png" alt="Boston Kreme" />
@@ -430,7 +440,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-lemon">Quantity</label>
+                      <input id="qty-lemon" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-lemon.png" alt="Lemon" />
@@ -439,7 +450,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-strawberry">Quantity</label>
+                      <input id="qty-strawberry" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-strawberry.png" alt="Strawberry" />
@@ -448,7 +460,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-bkrasp">Quantity</label>
+                      <input id="qty-bkrasp" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-blackraspberry.png" alt="Black Raspberry" />
@@ -457,7 +470,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-chock">Quantity</label>
+                      <input id="qty-chock" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolatekreme.png" alt="Chocolate Kreme" />
@@ -466,7 +480,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-strawf">Quantity</label>
+                      <input id="qty-strawf" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-strawberryfrosted.png" alt="Strawberry Frosted" />
@@ -475,7 +490,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-chocf">Quantity</label>
+                      <input id="qty-chocf" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolatefrosted.png" alt="Chocolate Frosted" />
@@ -484,7 +500,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-vf">Quantity</label>
+                      <input id="qty-vf" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-vanillafrosted.png" alt="Vanilla Frosted" />
@@ -493,7 +510,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-maplef">Quantity</label>
+                      <input id="qty-maplef" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-maplefrosted.png" alt="Maple Froste4" />
@@ -502,7 +520,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-confetti">Quantity</label>
+                      <input id="qty-confetti" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolateconfetti.png" alt="Chocolate Confetti" />
@@ -511,7 +530,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-cbut">Quantity</label>
+                      <input id="qty-cbut" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolatebutternut.png" alt="Chocolate Butternut" />
@@ -520,7 +540,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-but">Quantity</label>
+                      <input id="qty-but" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-butternut.png" alt="Donut Butternut" />
@@ -529,7 +550,8 @@
                   <li>
                     <div class="qty-number">
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="0" />
+                      <label for="qty-chocc">Quantity</label>
+                      <input id="qty-chocc" type="text" value="0" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                     <img class="thumb" src="./images/products/donut-chocolatecoconut.png" alt="Chocolate Coconut" />
@@ -543,7 +565,8 @@
                     <h5>Pack Quantity</h5>
                     <div>
                       <span class="minus"><img src="./images/icons/minus.svg" alt="minus" /></span>
-                      <input type="text" value="1" />
+                      <label for="qty-pack">Quantity</label>
+                      <input id="qty-pack" type="text" value="1" />
                       <span class="plus"><img src="./images/icons/plus.svg" alt="plus" /></span>
                     </div>
                   </div>
@@ -572,19 +595,19 @@
       </div>
 
       <div class="cta-container">
-        <h4 class="cta-title"><img src="./images/icons/giftcard.svg" alt="Giftcards" /> Giftcards</h4>
+        <h4 class="cta-title"><img src="./images/icons/giftcard.svg" alt="" /> Giftcards</h4>
         <p class="cta-text">Stop the guessing game and give them the gift of choice!</p>
         <a href="order.html#giftcards" class="btn-outline">Buy Giftcards</a>
       </div>
 
       <div class="cta-container orange careers">
-        <h4 class="cta-title"><img src="./images/icons/user.svg" alt="Careers" /> Careers</h4>
+        <h4 class="cta-title"><img src="./images/icons/user.svg" alt="" /> Careers</h4>
         <p class="cta-text">Join our team and become part of the Dunkin’ family!</p>
         <a href="careers.html" class="btn-outline">View Jobs</a>
       </div>
 
       <div class="cta-container faq">
-        <h4 class="cta-title"><img src="./images/icons/faq.svg" alt="FAQs" /> FAQs</h4>
+        <h4 class="cta-title"><img src="./images/icons/faq.svg" alt="" /> FAQs</h4>
         <p class="cta-text">Got some questions about us
           or our products?</p>
         <a href="faq.html" class="btn-outline">Check our FAQs</a>
