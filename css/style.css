@@ -3,7 +3,7 @@
 
 
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 
@@ -21,9 +21,10 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
-html, body {
+html,
+body {
     background: #fff;
     margin: 0 auto;
     padding: 0;
@@ -51,8 +52,7 @@ main {
     padding-top: 130px;
 }
 
-main.staticcontent
-{
+main.staticcontent {
     margin-bottom: 40px;
 }
 
@@ -61,19 +61,28 @@ section {
 }
 
 div.twocol-content {
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     gap: 32px;
 }
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    div.twocol-content .leftcol {
+        margin-right: 32px; /* because iOS does not support gap */
+  }
+}
+
 
 .mobilemenubtn,
 .mobilemenu {
     display: none;
 }
 
-.narrow
-{
-    
+.narrow {
+
     max-width: 984px;
     margin-left: auto;
     margin-right: auto;
@@ -105,10 +114,9 @@ h1 {
 
 }
 
-.narrow h1 
-{
-   text-align: center;
-   margin-bottom: 20px;
+.narrow h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -195,7 +203,9 @@ button,
 button.btn,
 a.btn,
 .btn,
-input[type=submit] {
+input[type=submit],
+input[type=button] {
+    -webkit-appearance: none; 
     padding: 10px 28px;
     border-radius: 60px;
     font-weight: bold;
@@ -224,8 +234,7 @@ a.btn:focus {
 
 .btn-outline,
 a.btn-outline,
-button.btn-outline
- {
+button.btn-outline {
     padding: 10px 28px;
     border-radius: 60px;
     font-weight: bold;
@@ -247,7 +256,7 @@ button.btn-outline:focus,
 
 label {
     border: 0;
-/*    clip: rect(0 0 0 0); */
+    /*    clip: rect(0 0 0 0); */
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -259,13 +268,16 @@ label {
 /* header css */
 header {
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.05);
+    display: -webkit-flex;
     display: flex;
- /*   padding: 20px 0 20px 0; */
+    /*   padding: 20px 0 20px 0; */
 }
 
 header div {
     width: 100%;
+    display: -webkit-flex;
     display: flex;
+    justify-content: -webkit-space-between;
     justify-content: space-between;
 }
 
@@ -285,11 +297,24 @@ header nav ul {
     margin: 0px;
 }
 
-header nav li
-{
+header nav li {
     padding: 38px 0px 18px 0px;
     margin-bottom: -4px;
     border-bottom: 4px solid transparent;
+}
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    header nav li {
+        margin-right: 38px;
+        white-space: nowrap;
+  }
+
+  header nav li:last-child
+  {
+      margin-right: 0px;
+  }
 }
 
 header nav ul li a {
@@ -310,7 +335,8 @@ header nav ul li a {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
+   display: -webkit-flex;
+    display: flex; 
 }
 
 nav ul li {
@@ -322,6 +348,7 @@ nav ul li {
 
 
 nav.productnav ul {
+    justify-content: -webkit-space-between;
     justify-content: space-between;
     align-items: center;
     overflow: auto;
@@ -331,29 +358,34 @@ nav.productnav ul {
     margin: 0;
 }
 
-nav.productnav .nav li
-{
-    border-bottom: 4px solid transparent;  
+nav.productnav .nav li {
+    border-bottom: 4px solid transparent;
     padding: 20px 0px 14px 0px;
     margin-bottom: 4px;
+}
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    nav.productnav .nav li {
+        margin-right: 38px;
+        white-space: nowrap;
+  }
+
+  nav.productnav ul li:last-child
+  {
+      margin-right: 0px;
+  }
 }
 
 header nav li:hover,
 nav.productnav .nav li:hover,
 li.nav-item.activepage,
-nav.productnav .nav li.activepage
-{
+nav.productnav .nav li.activepage {
     border-bottom: 4px solid var(--dunkin-orange);
 }
 
 
-nav.productnav ul li:first-child {
-    padding-left: 0;
-}
-
-nav.productnav ul li:last-child {
-    padding-right: 0;
-}
 
 .desktopview {
     display: block;
@@ -382,7 +414,9 @@ nav.productnav ul li:last-child {
     color: #fff;
 }
 
-.callout.mobilenav::after /* callout.mobilenav arrow */
+.callout.mobilenav::after
+
+/* callout.mobilenav arrow */
     {
     content: "";
     position: absolute;
@@ -509,7 +543,9 @@ nav.productnav ul li:last-child {
 
 .modal .selectionheader {
     border-bottom: 1px solid #C4C4C4;
+    display: -webkit-flex;
     display: flex;
+    justify-content: -webkit-space-between;
     justify-content: space-between;
     padding-bottom: 8px;
     margin-bottom: 20px;
@@ -536,6 +572,7 @@ nav.productnav ul li:last-child {
 }
 
 .modal .donut-flavour li {
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     padding: 5px 0 5px 0;
@@ -545,6 +582,7 @@ nav.productnav ul li:last-child {
 
 .modal .qty-number {
     white-space: nowrap;
+    display: -webkit-flex;
     display: flex;
     gap: 5px;
 }
@@ -570,8 +608,10 @@ nav.productnav ul li:last-child {
 .modal-footer-content {
     border-top: 1px solid #C4C4C4;
     padding-top: 16px;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
+    justify-content: -webkit-space-between;
     justify-content: space-between;
     gap: 10px;
 }
@@ -580,20 +620,49 @@ nav.productnav ul li:last-child {
     gap: 10px;
 }
 
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    .modal-footer-content .qty-number h5 {
+        margin-right: 10px; /* because iOS does not support gap */
+  }
+}
+
 .modal .sidebysidebtns {
+    display: -webkit-flex;
     display: flex;
     gap: 10px;
 }
 
-.modal .sidebysidebtns.fullwidth
-{
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    .modal .sidebysidebtns button {
+        margin-right: 10px; /* because iOS does not support gap */
+  }
+}
+
+
+.modal .sidebysidebtns.fullwidth {
+    display: -webkit-flex;
     display: flex;
     gap: 10px;
     margin-top: 32px;
 }
 
-.modal .sidebysidebtns.fullwidth a
-{ 
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    .modal .sidebysidebtns.fullwidth a:first-child {
+        margin-right: 10px; /* because iOS does not support gap */
+  }
+}
+
+
+
+.modal .sidebysidebtns.fullwidth a {
     display: block;
     width: 100%;
     text-align: center;
@@ -601,16 +670,14 @@ nav.productnav ul li:last-child {
 }
 
 #signuploginModal h5,
-#cartModal h5
-{
+#cartModal h5 {
     color: var(--dunkin-pink);
     text-align: center;
     margin-top: 32px;
     margin-bottom: 12px;
 }
 
-#signuploginModal
-{
+#signuploginModal {
     text-align: center;
 }
 
@@ -636,8 +703,7 @@ nav.productnav ul li:last-child {
 #orderdetails button,
 #orderdetails .btn,
 #signuploginModal input,
-#cartModal input
-{
+#cartModal input {
     display: block;
     margin-bottom: 10px;
     width: 100%;
@@ -651,22 +717,25 @@ nav.productnav ul li:last-child {
     line-height: initial;
 }
 
-#loginfields, #signupfields,
-#m-loginfields, #m-signupfields
-{
+#loginfields,
+#signupfields,
+#m-loginfields,
+#m-signupfields {
     display: none;
 }
 
-#guestcheckout, #m-guestcheckout
-{
+#guestcheckout,
+#m-guestcheckout {
     display: none;
 }
+
 a.underlined {
     text-decoration: underline;
     color: var(--dunkin-pink);
 }
 
 .radiotoggle {
+    display: -webkit-flex;
     display: flex;
     margin-bottom: 10px;
 }
@@ -679,7 +748,7 @@ a.underlined {
     position: relative;
     width: 1px !important;
     display: inline;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 
@@ -719,20 +788,36 @@ label img {
     vertical-align: middle;
 }
 
-a.anchor
-{display: block; position: relative; top: -160px; visibility: hidden; }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -160px;
+    visibility: hidden;
+}
 
 .cart-item,
 .cart-total {
+    display: -webkit-flex;
     display: flex;
     gap: 16px;
     text-align: left;
     border-bottom: 1px solid #C4C4C4;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    justify-content: -webkit-space-between;
     justify-content: space-between;
     font-weight: bold;
 }
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    .cart-item .cart-item-price,
+    .cart-item .delete {
+        margin-left: 16px; /* because iOS does not support gap */
+  }
+}
+
 
 .cart-total {
     border-bottom: 0px;
@@ -775,14 +860,13 @@ a.anchor
     cursor: pointer;
 }
 
-.delete
-{
+.delete {
     cursor: pointer;
 }
 
-#emptycart, p#emptycart-modal
-{
-    display: none; 
+#emptycart,
+p#emptycart-modal {
+    display: none;
     text-align: center;
 }
 
@@ -805,18 +889,13 @@ input[type=submit]:disabled {
 }
 
 
-.ourstory
-{
+.ourstory {}
 
-
-}
-
-.ourstory img{
+.ourstory img {
     width: 100%;
 }
 
-.ourstory p
-{
+.ourstory p {
     margin: 30px 0px 30px 0px;
 }
 
@@ -824,8 +903,7 @@ input[type=submit]:disabled {
 /* Locations css */
 
 
-.contactlocation h5
-{   
+.contactlocation h5 {
     margin-bottom: 10px;
 }
 
@@ -836,65 +914,85 @@ input[type=submit]:disabled {
 
 
 
-.branchsearch
-{
+.branchsearch {
     background: url(../images/icons/search.svg) no-repeat 15px;
     padding-left: 50px;
 }
 
-#storeslist
-{
+#storeslist {
+    display: -webkit-flex;
     display: flex;
-    justify-content:space-between;
+    justify-content: -webkit-space-between;
+    justify-content: space-between;
     gap: 16px;
     align-items: center;
     margin-top: 45px;
     padding-bottom: 20px;
 }
 
-#storeslist .sortbyfilter
-{
+#storeslist .sortbyfilter {
+    display: -webkit-flex;
     display: flex;
     gap: 16px;
 }
+
+
+
 
 #storeslist label {
     border: 0;
     height: auto;
     margin: 0px;
-    overflow:unset;
+    overflow: unset;
     padding: 10px 0px 10px 0px;
     position: relative;
     width: auto;
 }
 
-#storeslist select
-{
-padding-right: 40px;
+#storeslist select {
+    padding-right: 40px;
 }
 
-.sortbyfilter label
-{
-padding: 0 !important;
-margin: 0 !important;
-white-space: nowrap;
+.sortbyfilter label {
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap;
 }
 
 .sortbyfilter select {
     width: 100%;
 }
 
-.sortby, .filter {
+.sortby,
+.filter {
+    display: -webkit-flex;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.storebranch
-{
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+
+    #storeslist .sortbyfilter .sortby
+     {
+        margin-right: 16px; /* because iOS does not support gap */
+  }
+
+  #storeslist select
+   {
+      margin-left: 10px; /* because iOS does not support gap */
+}
+}
+
+
+
+.storebranch {
+    display: -webkit-flex;
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    justify-content: -webkit-space-between;
     justify-content: space-between;
     border-top: 1px solid #c4c4c4;
     padding-bottom: 30px;
@@ -904,31 +1002,27 @@ white-space: nowrap;
 
 
 
-.storestatus
-{
+.storestatus {
     text-align: right;
 }
 
-.storeopen, .storeclosed
-{
+.storeopen,
+.storeclosed {
     font-weight: bold;
 }
 
-.storeopen::before
-{
-    content:url('../images/icons/storeopen.svg');
+.storeopen::before {
+    content: url('../images/icons/storeopen.svg');
     vertical-align: -15%;
 }
 
-.storeclosed::before
-{
-    content:url('../images/icons/storeclosed.svg');
+.storeclosed::before {
+    content: url('../images/icons/storeclosed.svg');
     vertical-align: -15%;
 }
 
-.openclosetime
-{
-    margin-bottom:20px;
+.openclosetime {
+    margin-bottom: 20px;
 }
 
 .storedetails a.underlined {
@@ -978,11 +1072,13 @@ white-space: nowrap;
 footer {
     box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05);
     padding: 30px 0px 30px 0px;
+    display: -webkit-flex;
     display: flex;
     margin-top: 40px;
 }
 
 footer div.widthlimit {
+    display: -webkit-flex;
     display: flex;
     flex-grow: 1;
     gap: 32px;
@@ -994,6 +1090,7 @@ footer nav {
 }
 
 footer nav ul.footernavitems {
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -1041,9 +1138,7 @@ ul.twocolorderonline {
     .productlist,
     .shop,
     .staticcontent,
-    footer
-    
-    {
+    footer {
         padding-left: 32px;
         padding-right: 32px;
     }
@@ -1090,7 +1185,7 @@ ul.twocolorderonline {
 @media only screen and (max-width: 962px) {
 
 
-/*    #calloutmobilenav {
+    /*    #calloutmobilenav {
         display: block;
     } */
 
@@ -1140,7 +1235,7 @@ ul.twocolorderonline {
     }
 
     nav.productnav ul {
-
+        justify-content: -webkit-flex-start;
         justify-content: flex-start;
         gap: 40px;
 
@@ -1157,8 +1252,7 @@ ul.twocolorderonline {
     a.btn,
     a.btn-outline,
     button.btn-outline,
-    .btn-outline
-    {
+    .btn-outline {
         padding: 10px 20px;
     }
 
@@ -1207,7 +1301,7 @@ ul.twocolorderonline {
 
     header {
         padding-top: 22px;
-/*        padding-bottom: 10px; */
+        /*        padding-bottom: 10px; */
     }
 
     header .widthlimit {
@@ -1230,7 +1324,9 @@ ul.twocolorderonline {
     }
 
     .headerleft {
+        display: -webkit-flex;
         display: flex;
+        justify-content: -webkit-space-between;
         justify-content: space-between;
     }
 
@@ -1297,7 +1393,7 @@ ul.twocolorderonline {
 
 
 
-    
+
 
     .leftcol {
         padding: 0px;
@@ -1346,34 +1442,30 @@ ul.twocolorderonline {
     }
 
 
-.narrow
-{
-    margin-top: 40px;
-}
+    .narrow {
+        margin-top: 40px;
+    }
 
-.narrow h1
-{
-    text-align: left;
-}
+    .narrow h1 {
+        text-align: left;
+    }
 
-    
-        #storeslist,
-        .sortbyfilter
-        {
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
- 
-        }
-    
-     #storeslist h5
-        {
-            margin-top: 0px;
-            text-align:left;
-            width: 100%;
-            margin-bottom: 0px;
-        }
-    
+
+    #storeslist,
+    .sortbyfilter {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+    }
+
+    #storeslist h5 {
+        margin-top: 0px;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
 
 
 
@@ -1381,7 +1473,7 @@ ul.twocolorderonline {
     footer ul.footernavitems {
         display: grid !important;
         grid-auto-flow: row;
-    /*    grid-template-columns: 50% 50%; */
+        /*    grid-template-columns: 50% 50%; */
         grid-template-rows: auto auto;
         column-gap: 16px;
         row-gap: 16px;
@@ -1420,6 +1512,7 @@ ul.twocolorderonline {
     }
 
     #mobile-viewcart-bar {
+        display: -webkit-flex;
         display: flex;
         position: fixed;
         left: 0px;
@@ -1439,21 +1532,31 @@ ul.twocolorderonline {
         line-height: initial;
     }
 
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */ 
+    
+        #mobile-viewcart-bar a:first {
+            margin-right: 10px; /* because iOS does not support gap */
+      }
+    }
+    
+
 
 
 }
 
 /*************** mobile below 380px *********/
 @media only screen and (max-width: 379px) {
-#cartModal .sidebysidebtns.fullwidth
-{
-flex-direction: column;
-}
+    #cartModal .sidebysidebtns.fullwidth {
+        flex-direction: column;
+    }
 }
 
 /*************** super small below 375px *********/
 @media only screen and (max-width: 374px) {
-    .leftcol .productsgrid, .productsgrid {
+
+    .leftcol .productsgrid,
+    .productsgrid {
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
     }
@@ -1468,30 +1571,28 @@ flex-direction: column;
         padding: 0px;
     }
 
-    #productModal .modal-footer-content
-    {
+    #productModal .modal-footer-content {
         flex-direction: column;
     }
 
-    .modal-footer-content .qty-number h5
-    {
+    .modal-footer-content .qty-number h5 {
         display: block;
     }
 
-    .modal-footer-content .qty-number
-    {
+    .modal-footer-content .qty-number {
         width: 100%;
+        justify-content: -webkit-space-between;
         justify-content: space-between;
     }
 
-    .modal-footer-content .sidebysidebtns
-    {
+    
+
+    .modal-footer-content .sidebysidebtns {
         width: 100%;
     }
 
     .modal-footer-content .sidebysidebtns a,
-    .modal-footer-content .sidebysidebtns button   
-    {
+    .modal-footer-content .sidebysidebtns button {
         width: 100%;
         margin-top: 10px;
     }
