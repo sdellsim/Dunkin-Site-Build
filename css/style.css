@@ -481,6 +481,15 @@ nav.productnav .nav li.activepage {
     text-align: center;
 }
 
+.productitem a.btn {
+display: table;
+border-spacing: 0;
+line-height: initial;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
 .productimg1x1 {
     position: relative;
     width: 100%;
@@ -1560,6 +1569,31 @@ ul.twocolorderonline {
 /*************** super small below 375px *********/
 @media only screen and (max-width: 374px) {
 
+    @supports (-webkit-touch-callout: none) { /* iOS fix */
+    .leftcol
+    {
+    margin-right: 0px !important;
+    }
+
+    #mobile-viewcart-bar a:first-child
+    {
+        margin-right: 8px;
+    }
+
+    .sidebysidebtns.fullwidth a:first-child
+    {
+        margin-bottom: 8px; /* because iOs doesnt support gap */
+    }
+
+    select#sortby
+    {
+        margin-right: -16px;
+    }
+
+
+}
+    
+
     .leftcol .productsgrid,
     .productsgrid {
         grid-template-columns: repeat(1, 1fr);
@@ -1580,6 +1614,19 @@ ul.twocolorderonline {
         flex-direction: column;
     }
 
+
+    button,
+button.btn,
+a.btn,
+.btn,
+input[type=submit],
+input[type=button] {
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+
+
     .modal-footer-content .qty-number h5 {
         display: block;
     }
@@ -1590,7 +1637,7 @@ ul.twocolorderonline {
         justify-content: space-between;
     }
 
-    
+
 
     .modal-footer-content .sidebysidebtns {
         width: 100%;
@@ -1603,3 +1650,9 @@ ul.twocolorderonline {
     }
 
 }
+
+
+
+
+
+
